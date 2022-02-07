@@ -13,6 +13,7 @@ int main(void)
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
     if (!window)
     {
+        printf("could not create window");
         glfwTerminate();
         return -1;
     }
