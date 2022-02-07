@@ -5,10 +5,15 @@
 int main(void)
 {
     GLFWwindow* window;
+    GLFWmonitor** monitors = NULL;
+    int monitorCount = 0;
 
     /* Initialize the library */
     if (!glfwInit())
         return -1;
+    
+    monitors = glfwGetMonitors(&monitorCount);
+    printf("Num mon : %d", monitorCount);    
 
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
