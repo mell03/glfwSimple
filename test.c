@@ -1,5 +1,6 @@
 // test.c
 #include <GLFW/glfw3.h>
+#include <cstdio>
 
 int main(void)
 {
